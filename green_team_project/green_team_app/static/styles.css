@@ -1,0 +1,342 @@
+
+body {
+    background-color: #FAF1E4;
+}
+
+/* HEADER STYLES */
+.nav-container {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        border: 2px solid #0a4c18;
+        padding: 20px;
+        margin-bottom: 5px; 
+        margin-top: 5px;
+        padding: 3px 0;
+        gap: 300px; /* Adjust the gap to increase spacing */
+    }
+
+.page-links a {
+    font-size: 25px; /* Adjust the font size */
+    margin: 0 50px;
+    text-decoration: none;
+    color: #0a4c18;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.nav-container a:hover {
+    color: #86c32c;
+}
+    
+
+/* HOME PAGE STYLES */
+.home-container {
+    display: flex; /* Use flexbox for two-column layout */
+    justify-content: space-between; /* Distribute columns evenly */
+    align-items: center; /* Vertically center content */
+    height: 80vh; 
+    padding: 0 5px; /* Add some padding */
+}
+
+.home-left {
+    flex: 1; /* Make the left column grow to fill available space */
+    text-align: center; /* Center the content */
+}
+
+.home-right {
+    flex: 1.5; /* Make the right column x times as wide as the left column */
+}
+
+/* Style for headings */
+.home-left p {
+    font-size: 40px; 
+    color: #0a4c18; 
+}
+
+.home-left h1 {
+    font-size: 120px; 
+    margin-top: 10px; 
+    color: #0a4c18; 
+}
+
+/* Style for description */
+.home-right p {
+    font-size: 18px; 
+    line-height: 1.5; 
+    color: #0a4c18; 
+}
+
+/* Style for image */
+.home-right img {
+    max-width: 100%; /* Ensure the image doesn't exceed column width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Additional style for the footer columns */
+.footer .column-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* PROJECTS PAGE STYLES */
+.heading-projects {
+    color: #0a4c18;
+}
+
+/* Apply alternating background colors */
+.project-container:nth-child(even) {
+    background-color: #ebf0c2;
+}
+
+.project-container:nth-child(odd) {
+    background-color: #FAF1E4;
+}
+
+/* Define classes for alternating image alignment */
+.left-image {
+    float: left;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+.right-image {
+    float: right;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+/* Flexbox for vertical center alignment */
+.project-container {
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: space-between; /* Distribute content evenly */
+    width: 100%; /* Take up the full width of the screen */
+    height: 50vh;
+    padding: 0 80px; /* Add left and right margins */
+    box-sizing: border-box;
+    clear: both;
+    overflow: auto;
+}
+
+.project-details h2 {
+    margin-bottom: 10;
+    color: #0a4c18;
+}
+
+.project-details p {
+    margin: 0;
+    color: #4d6351;
+}
+
+
+/* BLOG PAGE STYLES */
+.heading-blog {
+    color: #0a4c18;
+}
+
+.container {
+    margin-right: 120px;
+    margin-left: 120px;
+    max-width: 1194px; /* (398 + 398 + 398) */
+}
+
+.blog-post {
+    width: 398px;
+    margin-bottom: 30px;
+}
+
+.blog-post img {
+    width: 340px;
+    height: 227px;
+}
+
+/* Display blog posts in rows */
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Add margins to the left and right blogs in each row */
+.blog-post:not(:last-child) {
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+/* Apply link color and hover color */
+.container a, .blog-post a {
+    color: #0a4c18;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.container a:hover, .blog-post a:hover {
+    color: #86c32c;
+}
+
+/* BLOG DETAIL STYLES */
+
+.cover-photo-wrapper {
+    width: 796px; /* Twice the original size (398 * 2) */
+    height: 530px; /* Twice the original size (265 * 2) */
+    margin: 0; /* Center the cover photo */
+    display: flex; /* Add this line */
+    align-items: center; /* Add this line */
+    justify-content: center; /* Add this line */
+}
+
+
+.cover-photo-detail {
+    width: 100%;
+    height: 100%;
+}
+
+
+.author-and-date {
+    display: flex;
+    justify-content: space-between;
+}
+
+.author {
+    text-align: left;
+    color: #4d6351;
+}
+
+.date {
+    text-align: right;
+    color: #4d6351;
+}
+.blog-post-detail {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.blog-detail-container {
+    display: flex;
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Center the container vertically */
+    height: 100vh; /* Set the container height to the viewport height */
+}
+
+.blog-detail-container .container {
+    width: 100%; /* Set the width of the inner container to 100% */
+    max-width: 800px; /* Adjust the max width of the inner container as needed */
+}
+
+/* TEAM PAGE STYLES */
+.heading-team {
+    color: #0a4c18;
+}
+
+
+.team-member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    margin-top: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer; /* Add a pointer cursor when hovering over a card */
+}
+
+.team-member-card:hover {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto; 
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto; 
+    text-align: center;
+    color: #0a4c18;
+}
+
+.position {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4d6351;
+}
+
+.team-card-center .team-member-info {
+    text-align: center;
+}
+
+.modal-content {
+    text-align: center; /* Center the content in the modal */
+    color: #0a4c18;
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #5b9d4a;
+    padding: 30px 0;
+    color: #0a4c18;
+}
+
+.footer a {
+    color: #0a4c18;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #86c32c;
+}
+
+.footer .contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.footer .contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer .contact-form input[type="text"],
+.footer .contact-form input[type="email"],
+.footer .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.footer .contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.footer .contact-form button {
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+

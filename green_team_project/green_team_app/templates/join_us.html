@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Green Team - Join Us{% endblock %}
+
+{% block heading %}Join Us{% endblock %}
+
+{% block content %}
+    <h2>Join Us</h2>
+    <p>Join our Google Classroom with code: [Put your Google Classroom code here]</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Join Mailing List</button>
+    </form>
+{% endblock %}

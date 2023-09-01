@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="home-container">
+        <div class="home-left">
+            <p>Welcome to</p>
+            <h1>Green</h1>
+            <h1>Team</h1>
+        </div>
+        <div class="home-right">
+            <p>
+                <b>Green Team</b> is AITE's <u>first</u> environmental and sustainability club. We are <br>a  community dedicated to nurturing a greener tomorrow. <b>Join us</b> in fostering <br> positive change, where <u>passion for the planet meets impactful action.</u> 🌱🌏
+            </p>
+            <img src="{% static 'gt_logo.png' %}" alt="Green Team", width="500" height="100">
+        </div>
+    </div>
+{% endblock %}

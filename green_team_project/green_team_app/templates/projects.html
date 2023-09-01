@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block heading %}
+    <h1 class="heading-projects">Projects</h1>
+{% endblock %}
+
+{% block content %}
+        {% for project in projects %}
+            <div class="project-container">
+                {% if forloop.counter|divisibleby:2 %}
+                    <div class="project-details">
+                        <h2>{{ project.title }}</h2>
+                        <p>{{ project.description }}</p>
+                    </div>
+                    <img class="right-image" src="{{ project.image.url }}" alt="{{ project.title }}">
+                {% else %}
+                    <img class="left-image" src="{{ project.image.url }}" alt="{{ project.title }}">
+                    <div class="project-details">
+                        <h2>{{ project.title }}</h2>
+                        <p>{{ project.description }}</p>
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+   
+{% endblock %}

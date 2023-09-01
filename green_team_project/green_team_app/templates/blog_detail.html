@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Green Team - Blog{% endblock %}
+{% block heading %}
+    <h1 class="heading-blog">Green Team Blog</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="blog-post-detail">
+                    <div class="cover-photo-container">
+                        <div class="cover-photo-wrapper">
+                            <img src="{{ blog_post.cover_photo.url }}" alt="Cover Photo" class="cover-photo-detail">
+                        </div>
+                        <p class="author-and-date">
+                          
+                            <span class="author">
+                                {% if blog_post.author or blog_post.other_author %}
+                                    {% if blog_post.author %}
+                                        {{ blog_post.author }}
+                                    {% endif %}
+                                    {% if blog_post.other_author %}
+                                        {{ blog_post.other_author }}
+                                    {% endif %}
+                                {% else %}
+                                    Anonymous
+                                {% endif %}
+                            </span>
+                            <span class="date">{{ blog_post.created_at|date:"F d, Y" }}</span>
+                        </p>
+                    </div>
+                    <h1 class="post-title text-center">{{ blog_post.title }}</h1>
+                    <div class="blog-post-body text-left">
+                        {{ blog_post.body_text|safe }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+{% endblock %}
